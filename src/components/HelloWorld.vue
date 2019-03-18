@@ -24,6 +24,7 @@
           <img :src="scope.row.img" alt="" width="30%">
         </template>
       </el-table-column>
+      <!--利用插槽，在表格中插入input框-->
       <el-table-column
         prop="content"
         label="内容"
@@ -38,7 +39,7 @@
 </template>
 <script>
 export default {
-  name: 'CooecLiveSubsidyStandard',
+  name: 'HelloWorld',
   data () {
     return {
       // 表格的数据
@@ -49,13 +50,14 @@ export default {
   watch: {},
   create () {},
   mounted () {
+    // 获取表格的数据
     this.axios.get('http://www.wwtliu.com/sxtstu/blueberrypai/getIndexBanner.php').then((res) => {
-      console.log(res)
+      // 表格数据进行赋值
       this.tableData = res.data.banner
-      console.log(res.data.banner)
     })
   },
   methods: {
+    // 当input的值发生变化时，触发的事件
     change (row) {
       console.log(row)
     }
