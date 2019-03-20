@@ -1,6 +1,6 @@
 <template>
-  <div class="biz-HelloWord ">
-    <!--<div>-->
+  <div class="biz-one ">
+    <!--<div style="margin-bottom:10px;">-->
       <!--<el-button icon="icon iconfont icon-add" type="primary" plain ></el-button>-->
     <!--</div>-->
     <el-table
